@@ -5,11 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Transform player;
-    public GameObject spawnPoint;
     public float walkSpeed;
-
-    private float movementX;
-    private float movementY;
     
 
 
