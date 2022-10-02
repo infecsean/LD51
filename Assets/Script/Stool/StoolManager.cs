@@ -15,7 +15,7 @@ public class StoolManager : MonoBehaviour
         {
             stools.Add(gameObject.transform.GetChild(i).gameObject);
         }
-        Debug.Log(GetAvailableSeats().Count);
+        //Debug.Log(GetAvailableSeats().Count);
     }
 
     public void RemoveStool()

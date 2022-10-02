@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4959936093334293690}
   - component: {fileID: 4959936093334293700}
   - component: {fileID: 4959936093334293691}
+  - component: {fileID: 2120739695}
   m_Layer: 0
   m_Name: Stool
   m_TagString: Stool
@@ -98,6 +99,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &2120739695
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936093334293689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936093391749261
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +136,7 @@ GameObject:
   - component: {fileID: 4959936093391749262}
   - component: {fileID: 4959936093391749256}
   - component: {fileID: 4959936093391749263}
+  - component: {fileID: 1826661773}
   m_Layer: 0
   m_Name: Stool (4)
   m_TagString: Stool
@@ -196,6 +224,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &1826661773
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936093391749261}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936093593231978
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +261,7 @@ GameObject:
   - component: {fileID: 4959936093593231979}
   - component: {fileID: 4959936093593231989}
   - component: {fileID: 4959936093593231988}
+  - component: {fileID: 1433139111}
   m_Layer: 0
   m_Name: Stool (3)
   m_TagString: Stool
@@ -294,6 +349,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &1433139111
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936093593231978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936093760502130
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +386,7 @@ GameObject:
   - component: {fileID: 4959936093760502131}
   - component: {fileID: 4959936093760502141}
   - component: {fileID: 4959936093760502140}
+  - component: {fileID: 398645499}
   m_Layer: 0
   m_Name: Stool (1)
   m_TagString: Stool
@@ -392,6 +474,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &398645499
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936093760502130}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936093868032999
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +511,7 @@ GameObject:
   - component: {fileID: 4959936093868032992}
   - component: {fileID: 4959936093868032994}
   - component: {fileID: 4959936093868032993}
+  - component: {fileID: 282340505}
   m_Layer: 0
   m_Name: Stool (2)
   m_TagString: Stool
@@ -490,6 +599,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &282340505
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936093868032999}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936094132323086
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +693,7 @@ GameObject:
   - component: {fileID: 4959936094142618215}
   - component: {fileID: 4959936094142618209}
   - component: {fileID: 4959936094142618208}
+  - component: {fileID: 717340154}
   m_Layer: 0
   m_Name: Stool (8)
   m_TagString: Stool
@@ -645,6 +781,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &717340154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936094142618214}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936094297604664
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +818,7 @@ GameObject:
   - component: {fileID: 4959936094297604665}
   - component: {fileID: 4959936094297604667}
   - component: {fileID: 4959936094297604666}
+  - component: {fileID: 1487125284}
   m_Layer: 0
   m_Name: Stool (6)
   m_TagString: Stool
@@ -743,6 +906,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &1487125284
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936094297604664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936094517540767
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +943,7 @@ GameObject:
   - component: {fileID: 4959936094517540760}
   - component: {fileID: 4959936094517540762}
   - component: {fileID: 4959936094517540761}
+  - component: {fileID: 1553774047}
   m_Layer: 0
   m_Name: Stool (7)
   m_TagString: Stool
@@ -841,6 +1031,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &1553774047
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936094517540767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936094682417490
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +1068,7 @@ GameObject:
   - component: {fileID: 4959936094682417491}
   - component: {fileID: 4959936094682417501}
   - component: {fileID: 4959936094682417500}
+  - component: {fileID: 1873776337}
   m_Layer: 0
   m_Name: Stool (9)
   m_TagString: Stool
@@ -939,6 +1156,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &1873776337
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936094682417490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936094706312486
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +1193,7 @@ GameObject:
   - component: {fileID: 4959936094706312487}
   - component: {fileID: 4959936094706312481}
   - component: {fileID: 4959936094706312480}
+  - component: {fileID: 1825378010}
   m_Layer: 0
   m_Name: Stool (10)
   m_TagString: Stool
@@ -1037,6 +1281,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &1825378010
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936094706312486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936094992395531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1318,7 @@ GameObject:
   - component: {fileID: 4959936094992395540}
   - component: {fileID: 4959936094992395542}
   - component: {fileID: 4959936094992395541}
+  - component: {fileID: 1265213219}
   m_Layer: 0
   m_Name: Stool (5)
   m_TagString: Stool
@@ -1135,6 +1406,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &1265213219
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936094992395531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4959936095007196045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,6 +1443,7 @@ GameObject:
   - component: {fileID: 4959936095007196046}
   - component: {fileID: 4959936095007196040}
   - component: {fileID: 4959936095007196047}
+  - component: {fileID: 467513031}
   m_Layer: 0
   m_Name: Stool (11)
   m_TagString: Stool
@@ -1233,3 +1531,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeated: 0
+--- !u!61 &467513031
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959936095007196045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

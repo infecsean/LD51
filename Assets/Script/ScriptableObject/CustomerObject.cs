@@ -12,7 +12,7 @@ public class CustomerObject : ScriptableObject
 
     public List<GameObject> orderPool;
     public int decisionTime; //how long til decide to order. alcoholics 0, children 30, adult 10
-    public int patience; //how many intervals waiting
+    public float patience; //how many intervals waiting
     public int tolerance; //alcoholics have 5, meaning they order 5 refills
     public int tip; //how much they tip, children tip 0, alcoholic tip random, adult tip tolerance amount, 
 }

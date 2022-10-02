@@ -12,6 +12,9 @@ public class CustomerStateManager : MonoBehaviour
     //public TMPro.TextMeshProUGUI timeLeftIndicator;
     private float timeRemaining;
 
+    [HideInInspector]
+    public bool leave = false;
+
     [ReadOnly]
     public string currentstate;
 
@@ -33,11 +36,11 @@ public class CustomerStateManager : MonoBehaviour
 
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         currentState.OnCollisionEnter(this, collision);
     }
+
 
 
     private void Update()
@@ -63,4 +66,11 @@ public class CustomerStateManager : MonoBehaviour
 
         
     }
+
+    public void GoDestroy()
+    {
+        Destroy(gameObject, .5f);
+    }
+
+
 }

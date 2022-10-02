@@ -13,7 +13,7 @@ public class CustomerEating : CustomerBaseState
     {
 
     }
-    public override void OnCollisionEnter(CustomerStateManager customer, Collision2D collision)
+    public override void OnCollisionEnter(CustomerStateManager customer, Collider2D collision)
     {
 
     }
