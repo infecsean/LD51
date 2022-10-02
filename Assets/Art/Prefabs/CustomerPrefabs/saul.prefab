@@ -117,6 +117,9 @@ MonoBehaviour:
   customerObject: {fileID: 11400000, guid: fc08a737ec1f18a488961f7acf80b6ed, type: 2}
   exitTarget: {fileID: 5960450197323634556, guid: 19042200fce657140b59c6a432c15fa7, type: 3}
   stoolManager: {fileID: 0}
+  button: {fileID: 0}
+  buttonsCanvas: {fileID: 0}
+  buttonSprite: {fileID: 0}
   leave: 0
   currentstate: 
 --- !u!61 &873006159

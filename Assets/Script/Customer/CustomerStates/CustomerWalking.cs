@@ -7,6 +7,11 @@ public class CustomerWalking : CustomerBaseState
     int indexOfChosenSeat;
     public override void EnterState(CustomerStateManager customer)
     {
+        if (customer.button.activeSelf)
+        {
+            customer.button.SetActive(false);
+        }
+
         if (!customer.leave)
         {
             //Debug.Log(customer.stoolManager.GetComponent<StoolManager>().GetAvailableSeats().Count);
