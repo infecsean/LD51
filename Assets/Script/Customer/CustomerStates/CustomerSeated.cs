@@ -7,13 +7,16 @@ public class CustomerSeated : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
+        int customerDecisionTime = customer.customerObject.decisionTime;
 
+        customer.SwitchState(customer.Ordering, customerDecisionTime);
+        
     }
     public override void UpdateState(CustomerStateManager customer)
     {
-
+        
     }
-    public override void OnCollisionEnter(CustomerStateManager customer)
+    public override void OnCollisionEnter(CustomerStateManager customer, Collision2D collision)
     {
 
     }

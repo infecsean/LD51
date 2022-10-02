@@ -18,7 +18,7 @@ public class StoolManager : MonoBehaviour
         Debug.Log(GetAvailableSeats().Count);
     }
 
-    void RemoveStool()
+    public void RemoveStool()
     {
         
     }
