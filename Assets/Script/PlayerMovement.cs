@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
             player.position += new Vector3(0f, Input.GetAxisRaw("Vertical") * walkSpeed, 0f);
         }
 
-        Debug.Log(Input.GetAxis("Horizontal") + ", " + Input.GetAxis("Vertical"));
+        //Debug.Log(Input.GetAxis("Horizontal") + ", " + Input.GetAxis("Vertical"));
 
     }
 
