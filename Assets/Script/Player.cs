@@ -9,13 +9,11 @@ public class Player : MonoBehaviour, IUpgradeCustomer
     public float walkSpeed;
     public float salary;
     public int health;
-<<<<<<< HEAD
+    public bool canWalk;
 
     public List<GameObject> drinksInHand;
     public GameObject objectParent;
     public GameObject counterArea;
-=======
->>>>>>> parent of 44286aa (add Pause Menu)
 
     public float money;
 
@@ -31,11 +29,16 @@ public class Player : MonoBehaviour, IUpgradeCustomer
         salary = 1;
         health = 90;
         money = 3;
+        canWalk = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!canWalk)
+        {
+            return;
+        }
         animator.SetFloat("Speed", (Mathf.Abs(Input.GetAxisRaw("Horizontal")) + Mathf.Abs(Input.GetAxisRaw("Vertical"))));
         animator.SetInteger("XDirection", (int)Input.GetAxisRaw("Horizontal"));
 
