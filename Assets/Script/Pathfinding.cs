@@ -31,7 +31,7 @@ public class Pathfinding : MonoBehaviour
 		Node startNode = grid.NodeFromWorldPoint(startPos);
 		Node targetNode = grid.NodeFromWorldPoint(targetPos);
 
-		Debug.Log(startNode.walkable + ", " + targetNode.walkable);
+		//Debug.Log(startNode.walkable + ", " + targetNode.walkable);
 
 
 		if (startNode.walkable && targetNode.walkable)

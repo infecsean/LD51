@@ -68,7 +68,11 @@ public class CustomerStateManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        currentState.OnCollisionEnter(this, collision);
+        if (!collision.gameObject.CompareTag("Floor"))
+        { 
+            currentState.OnCollisionEnter(this, collision); 
+        }
+        
     }
 
 
@@ -82,7 +86,7 @@ public class CustomerStateManager : MonoBehaviour
 
         if (button.transform.GetChild(1).GetComponent<BoolButton>().pressed)
         {
-            Debug.Log("pressed");
+            //Debug.Log("pressed");
             OnButtonPress();
         }
     }
