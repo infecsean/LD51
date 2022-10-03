@@ -11,6 +11,10 @@ public class Player : MonoBehaviour, IUpgradeCustomer
     public int health;
     public bool canWalk;
 
+    public List<GameObject> drinksInHand;
+    public GameObject objectParent;
+    public GameObject counterArea;
+
     public float money;
 
     public Animator animator;
@@ -19,6 +23,7 @@ public class Player : MonoBehaviour, IUpgradeCustomer
     // Start is called before the first frame update
     void Start()
     {
+        drinksInHand = new List<GameObject>();
         walkSpeed /= 100;
         holdCount = 1;
         salary = 1;
@@ -54,9 +59,41 @@ public class Player : MonoBehaviour, IUpgradeCustomer
         {
             player.position += new Vector3(0f, Input.GetAxisRaw("Vertical") * walkSpeed, 0f);
         }
-        
 
-        //Debug.Log(Input.GetAxis("Horizontal") + ", " + Input.GetAxis("Vertical"));
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D[] hits = Physics2D.GetRayIntersectionAll(ray, Mathf.Infinity);
+            Vector2 mouseScreenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+
+            foreach (var hit in hits)
+            {
+
+                Debug.Log(hit.collider.tag);
+                Debug.Log(holdCount >= drinksInHand.Count);
+                Debug.Log(drinksInHand.Count);
+                Debug.Log(holdCount);
+                if (hit.collider.CompareTag("Drinks") && holdCount >= drinksInHand.Count && !hit.collider.CompareTag("Button"))
+                {
+                    PickUpDrinks(hit.collider.gameObject);
+                    drinksInHand.Add(hit.collider.gameObject);
+                    break;
+                }
+                else if (hit.collider.CompareTag("Floor") && drinksInHand.Count > 0 && drinksInHand.Count >= holdCount && !hit.collider.CompareTag("Button"))
+                {
+                    PutDownDrink(drinksInHand[0], mouseWorldPos);
+                    drinksInHand.Remove(drinksInHand[0]);
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+        }
     }
 
     public void BoughtItem(Upgrade.UpgradeType upgradeType)
@@ -73,7 +110,7 @@ public class Player : MonoBehaviour, IUpgradeCustomer
         switch (upgradeType)
         {
             case Upgrade.UpgradeType.IncreaseRunSpeed:
-                walkSpeed += 0.002f;
+                walkSpeed += 0.0025f;
                 money -= cost;
                 return;
             case Upgrade.UpgradeType.IncreaseHoldAmount:
@@ -95,5 +132,23 @@ public class Player : MonoBehaviour, IUpgradeCustomer
             default:
                 return;
         }
+    }
+
+    void PickUpDrinks(GameObject drink)
+    {
+        //Debug.Log("Picking up drinks");
+        drink.transform.SetParent(this.transform);
+        drink.transform.localPosition = new Vector3(0, 1, 0);
+    }
+    void PutDownDrink(GameObject drink, Vector3 position)
+    {
+        //Debug.Log("putting down drinks");
+        drink.transform.SetParent(objectParent.transform);
+        drink.transform.position = position;
+    }
+
+    public List<GameObject> HasDrinks()
+    {
+        return drinksInHand;
     }
 }

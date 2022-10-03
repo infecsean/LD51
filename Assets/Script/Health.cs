@@ -27,11 +27,17 @@ public class Health : MonoBehaviour
     private void Update()
     {
         health = player.GetComponent<Player>().health;
-        if (lastHealth != health)
+        if (lastHealth != health && health > 0)
         {
             path = $"Assets/Art/UI/Health-Bar-{health}.png";
             img.GetComponent<Image>().sprite = (Sprite)AssetDatabase.LoadAssetAtPath(path, typeof(Sprite));
         }
+        else if (lastHealth != health && health < 0)
+        {
+            path = $"Assets/Art/UI/Health-Bar-10.png";
+            img.GetComponent<Image>().sprite = (Sprite)AssetDatabase.LoadAssetAtPath(path, typeof(Sprite));
+        }
+
         lastHealth = health;
     }
 }

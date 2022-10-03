@@ -15,9 +15,11 @@ MonoBehaviour:
   customerSprite: {fileID: 0}
   customerName: 
   orderPool:
-  - {fileID: 529343251714779553, guid: 66d867b5dca316e409a4901bb2af863c, type: 3}
   - {fileID: 657428113879930798, guid: b06817778a3bd8d43be575971c7e17d4, type: 3}
-  decisionTime: 5
-  patience: 4
+  - {fileID: 8780363182830932705, guid: aa3101dbd502bcf43b8ac0d57c296863, type: 3}
+  - {fileID: 3509379753132091815, guid: 78c043f1358eb764f9d261b6ab656002, type: 3}
+  - {fileID: 529343251714779553, guid: 66d867b5dca316e409a4901bb2af863c, type: 3}
+  decisionTime: 10
+  patience: 10
   tolerance: 3
   tip: 2

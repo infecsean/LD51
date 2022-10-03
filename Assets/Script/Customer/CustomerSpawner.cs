@@ -6,11 +6,12 @@ public class CustomerSpawner : MonoBehaviour
 {
     public List<GameObject> customerPool;
     public int spawnCount;
+    public int waveNumber;
 
     private void Start()
     {
-
-        StartCoroutine(SpawnCustomers());
+        waveNumber = 1;
+        StartCoroutine(SpawnCustomers(10f));
     }
 
     void Update()
@@ -18,10 +19,12 @@ public class CustomerSpawner : MonoBehaviour
         
     }
 
+    
 
-    IEnumerator SpawnCustomers()
+    IEnumerator SpawnCustomers(float seconds)
     {
-        WaitForSeconds wait = new WaitForSeconds(1f);
+        WaitForSeconds seconds1 = new WaitForSeconds(seconds);
+        WaitForSeconds wait = new WaitForSeconds(10f);
 
         for (int i = 0; i < spawnCount; i++)
         {
@@ -29,7 +32,12 @@ public class CustomerSpawner : MonoBehaviour
             Instantiate(customerPool[indexToSpawn], this.transform.position, Quaternion.identity, this.transform);
             yield return wait;
         }
-    }
 
+        yield return seconds1;
+        spawnCount += waveNumber*2;
+        waveNumber++;
+        StartCoroutine(SpawnCustomers(10f));
+    }
+    
 
 }
