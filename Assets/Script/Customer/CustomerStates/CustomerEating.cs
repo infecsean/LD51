@@ -7,7 +7,7 @@ public class CustomerEating : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
-
+        customer.button.SetActive(false);
     }
     public override void UpdateState(CustomerStateManager customer)
     {

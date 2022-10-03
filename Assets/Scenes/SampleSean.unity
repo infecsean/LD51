@@ -834,6 +834,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1315967719}
     - target: {fileID: 3843612633467626078, guid: c0c0160eea292f14298eca74493eee52, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3244663832988872765}
+    - target: {fileID: 3843612633467626078, guid: c0c0160eea292f14298eca74493eee52, type: 3}
       propertyPath: stoolManager
       value: 
       objectReference: {fileID: 2026288363}
@@ -4179,6 +4183,7 @@ GameObject:
   - component: {fileID: 1802925528}
   - component: {fileID: 1802925527}
   - component: {fileID: 1802925526}
+  - component: {fileID: 1802925529}
   m_Layer: 5
   m_Name: InteractButton
   m_TagString: Untagged
@@ -4249,7 +4254,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1802925527}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1802925529}
+        m_TargetAssemblyTypeName: BoolButton, Assembly-CSharp
+        m_MethodName: PressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1802925527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4288,6 +4305,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802925524}
   m_CullTransparentMesh: 1
+--- !u!114 &1802925529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802925524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a6c14d4b5e027488aab87dc01adf03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressed: 0
 --- !u!1 &1910888739
 GameObject:
   m_ObjectHideFlags: 0
@@ -4346,6 +4376,10 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 1315967719}
+    - target: {fileID: 4306484434147076355, guid: dd8f9df0b0455f541beef9f88a03f68c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3244663832988872765}
     - target: {fileID: 4306484434147076355, guid: dd8f9df0b0455f541beef9f88a03f68c, type: 3}
       propertyPath: stoolManager
       value: 
@@ -4616,7 +4650,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1177998624, guid: 33b6affaf8ea11743a5606d7485f6655, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

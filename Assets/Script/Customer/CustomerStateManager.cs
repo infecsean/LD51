@@ -79,6 +79,12 @@ public class CustomerStateManager : MonoBehaviour
         currentState.UpdateState(this);
         //timeLeftIndicator.text = timeRemaining.ToString();
         currentstate = currentState.ToString();
+
+        if (button.transform.GetChild(1).GetComponent<BoolButton>().pressed)
+        {
+            Debug.Log("pressed");
+            OnButtonPress();
+        }
     }
 
     public void SwitchState(CustomerBaseState state, float secondsToWait)
