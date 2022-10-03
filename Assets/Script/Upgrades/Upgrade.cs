@@ -36,15 +36,15 @@ public class Upgrade : MonoBehaviour
         switch (upgradeType)
         {
             case UpgradeType.IncreaseRunSpeed:
-                return (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Upgrades/Yellow_Arrow.png", typeof(Sprite));
+                return Resources.Load<Sprite>("Stuff/Yellow_Arrow");
             case UpgradeType.IncreaseHoldAmount:
-                return (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Upgrades/Storage.png", typeof(Sprite));
+                return Resources.Load<Sprite>("Stuff/Storage");
             case UpgradeType.IncreaseSalary:
-                return (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Upgrades/Coin.png", typeof(Sprite));
+                return Resources.Load<Sprite>("Stuff/Coin");
             case UpgradeType.HealthPotion:
-                return (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Upgrades/Red_Arrow.png", typeof(Sprite));
+                return Resources.Load<Sprite>("Stuff/Red_Arrow");
             default:
-                return (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Upgrades/Yellow_Arrow.png", typeof(Sprite));
+                return Resources.Load<Sprite>("Stuff/Yellow_Arrow");
         }
     }
 }

@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
         health = player.GetComponent<Player>().health;
 
         img = healthBar.Find("HealthBar");
-        img.GetComponent<Image>().sprite = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/UI/Health-Bar-90.png", typeof(Sprite));
+        img.GetComponent<Image>().sprite = Resources.Load<Sprite>("Stuff/Health-Bar-90");
     }
 
     private void Update()
@@ -29,13 +29,13 @@ public class Health : MonoBehaviour
         health = player.GetComponent<Player>().health;
         if (lastHealth != health && health > 0)
         {
-            path = $"Assets/Art/UI/Health-Bar-{health}.png";
-            img.GetComponent<Image>().sprite = (Sprite)AssetDatabase.LoadAssetAtPath(path, typeof(Sprite));
+            path = $"Stuff/Health-Bar-{health}";
+            img.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);
         }
         else if (lastHealth != health && health < 0)
         {
-            path = $"Assets/Art/UI/Health-Bar-10.png";
-            img.GetComponent<Image>().sprite = (Sprite)AssetDatabase.LoadAssetAtPath(path, typeof(Sprite));
+            path = $"Stuff/Health-Bar-0";
+            img.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);
         }
 
         lastHealth = health;
