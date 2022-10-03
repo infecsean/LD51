@@ -18,6 +18,7 @@ public class CustomerOrdering : CustomerBaseState
     {
         recievedDrink = false;
         customer.button.SetActive(true);
+        
         customer.button.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = new Vector2(100, 100);
         indexToDisplay = Random.Range(0, customer.drinkPool.Count);
         //Debug.Log(customer.drinkPool[indexToDisplay].GetComponent<SpriteRenderer>().sprite.name);
@@ -28,6 +29,7 @@ public class CustomerOrdering : CustomerBaseState
         //start countdown till patience runs out
         customerPatience = customer.customerObject.patience;
         customerP = customerPatience;
+        Debug.Log(customerP);
     }
     public override void UpdateState(CustomerStateManager customer)
     {
@@ -48,6 +50,7 @@ public class CustomerOrdering : CustomerBaseState
 
         if (recievedDrink)
         {
+            customer.player.GetComponent<Player>().money += customer.player.GetComponent<Player>().salary;
             customer.SwitchState(customer.Eating, 0f);
         }
 
@@ -61,20 +64,24 @@ public class CustomerOrdering : CustomerBaseState
         
 
         //check drinks on hand, if correct drink in hand, go to eating state, if not, do nothing
-        foreach (GameObject obj in customer.player.GetComponent<DrinksInHand>().HasDrinks())
+        foreach (GameObject obj in customer.player.GetComponent<Player>().HasDrinks())
         {
             //Debug.Log(obj.GetComponent<SpriteRenderer>().sprite.name + ", " + wishDrink.name);
             if (obj.GetComponent<SpriteRenderer>().sprite.name == wishDrink.name)
             {
-                objectIndex = customer.player.GetComponent<DrinksInHand>().drinksInHand.IndexOf(obj);
-                objectToRemove = customer.player.GetComponent<DrinksInHand>().drinksInHand[objectIndex];
+                objectIndex = customer.player.GetComponent<Player>().drinksInHand.IndexOf(obj);
+                objectToRemove = customer.player.GetComponent<Player>().drinksInHand[objectIndex];
 
                 recievedDrink = true;
-                Object.Destroy(objectToRemove, .1f);
+                if (objectToRemove != null)
+                {
+                    Object.Destroy(objectToRemove, .1f);
+
+                }
             }
         }
 
-        customer.player.GetComponent<DrinksInHand>().drinksInHand.Remove(objectToRemove);
+        customer.player.GetComponent<Player>().drinksInHand.Remove(objectToRemove);
 
     }
 }

@@ -12,7 +12,6 @@ public class CustomerStateManager : MonoBehaviour
     public GameObject button;
     public Canvas buttonsCanvas;
     public GameObject player;
-    public Sprite moneySprite;
 
     private List<Sprite> drinkPoolSprite;
 
@@ -120,7 +119,11 @@ public class CustomerStateManager : MonoBehaviour
 
     public void GoDestroy()
     {
-        Destroy(gameObject, .5f);
+        if (gameObject != null)
+        {
+            Destroy(gameObject, .5f);
+        }
+        
     }
 
 

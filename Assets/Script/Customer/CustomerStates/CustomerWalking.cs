@@ -35,7 +35,7 @@ public class CustomerWalking : CustomerBaseState
     public override void OnCollisionEnter(CustomerStateManager customer, Collider2D collision)
     {
         GameObject other = collision.gameObject;
-        Debug.Log(other.name);
+        //Debug.Log(other.name);
         
         if (!customer.leave)
         {
@@ -46,10 +46,12 @@ public class CustomerWalking : CustomerBaseState
         }
         else
         {
+            
             //Debug.Log(other.name + ", " + customer.exitTarget.name);
             if (other.name == customer.exitTarget.name)
             {
                 customer.GoDestroy();
+                customer.player.GetComponent<Player>().health -= 10;
             }
         }
     }
