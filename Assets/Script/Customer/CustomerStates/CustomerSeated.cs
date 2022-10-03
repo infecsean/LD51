@@ -20,4 +20,8 @@ public class CustomerSeated : CustomerBaseState
     {
 
     }
+    public override void OnButtonPress(CustomerStateManager customer)
+    {
+
+    }
 }

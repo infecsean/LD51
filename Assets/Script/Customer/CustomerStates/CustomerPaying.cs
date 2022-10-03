@@ -17,4 +17,8 @@ public class CustomerPaying : CustomerBaseState
     {
 
     }
+    public override void OnButtonPress(CustomerStateManager customer)
+    {
+
+    }
 }

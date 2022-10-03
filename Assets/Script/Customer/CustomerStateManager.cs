@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 public class CustomerStateManager : MonoBehaviour
@@ -10,9 +9,9 @@ public class CustomerStateManager : MonoBehaviour
     public CustomerObject customerObject;
     public GameObject exitTarget;
     public GameObject stoolManager;
-    //public TMPro.TextMeshProUGUI timeLeftIndicator;
     public GameObject button;
     public Canvas buttonsCanvas;
+    public GameObject player;
 
     private List<Sprite> drinkPoolSprite;
 
@@ -51,12 +50,12 @@ public class CustomerStateManager : MonoBehaviour
         foreach (GameObject gameObject in customerObject.orderPool)
         {
             drinkPool.Add(gameObject);
-            Debug.Log("adding drink from pool");
+            //Debug.Log("adding drink from pool");
         }
 
         button.SetActive(false);
         buttonSprite = button.transform.GetChild(1).GetComponent<Image>().sprite;
-        Debug.Log(drinkPool[0].GetComponent<SpriteRenderer>().sprite.name);
+        //Debug.Log(drinkPool[0].GetComponent<SpriteRenderer>().sprite.name);
         
 
 
@@ -69,7 +68,11 @@ public class CustomerStateManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        currentState.OnCollisionEnter(this, collision);
+        if (!collision.gameObject.CompareTag("Floor"))
+        { 
+            currentState.OnCollisionEnter(this, collision); 
+        }
+        
     }
 
 
@@ -80,6 +83,12 @@ public class CustomerStateManager : MonoBehaviour
         currentState.UpdateState(this);
         //timeLeftIndicator.text = timeRemaining.ToString();
         currentstate = currentState.ToString();
+
+        if (button.transform.GetChild(1).GetComponent<BoolButton>().pressed)
+        {
+            //Debug.Log("pressed");
+            OnButtonPress();
+        }
     }
 
     public void SwitchState(CustomerBaseState state, float secondsToWait)
@@ -96,6 +105,11 @@ public class CustomerStateManager : MonoBehaviour
         }
 
         
+    }
+
+    public void OnButtonPress()
+    {
+        currentState.OnButtonPress(this);
     }
 
     public void GoDestroy()
