@@ -9,10 +9,13 @@ public class Player : MonoBehaviour, IUpgradeCustomer
     public float walkSpeed;
     public float salary;
     public int health;
+<<<<<<< HEAD
 
     public List<GameObject> drinksInHand;
     public GameObject objectParent;
     public GameObject counterArea;
+=======
+>>>>>>> parent of 44286aa (add Pause Menu)
 
     public float money;
 
