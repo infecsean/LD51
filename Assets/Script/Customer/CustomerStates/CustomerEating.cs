@@ -17,4 +17,9 @@ public class CustomerEating : CustomerBaseState
     {
 
     }
+
+    public override void OnButtonPress(CustomerStateManager customer)
+    {
+        
+    }
 }

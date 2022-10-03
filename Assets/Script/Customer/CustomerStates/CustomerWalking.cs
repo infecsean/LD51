@@ -52,4 +52,8 @@ public class CustomerWalking : CustomerBaseState
             }
         }
     }
+    public override void OnButtonPress(CustomerStateManager customer)
+    {
+
+    }
 }
