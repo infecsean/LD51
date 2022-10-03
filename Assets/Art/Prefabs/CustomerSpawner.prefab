@@ -47,4 +47,6 @@ MonoBehaviour:
   customerPool:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnCount: 5

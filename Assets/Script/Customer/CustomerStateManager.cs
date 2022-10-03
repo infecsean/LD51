@@ -12,8 +12,12 @@ public class CustomerStateManager : MonoBehaviour
     public GameObject button;
     public Canvas buttonsCanvas;
     public GameObject player;
+    public Sprite moneySprite;
 
     private List<Sprite> drinkPoolSprite;
+
+    [HideInInspector]
+    public int customerTolerance;
 
     [HideInInspector]
     public List<GameObject> drinkPool;
@@ -38,6 +42,7 @@ public class CustomerStateManager : MonoBehaviour
 
     private void Start()
     {
+        customerTolerance = customerObject.tolerance;
         //puts all the possible object sprites inside a list so we can use it for displaying orders later
         drinkPoolSprite = new List<Sprite>();
         drinkPool = new List<GameObject>();
@@ -68,8 +73,9 @@ public class CustomerStateManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.CompareTag("Floor"))
-        { 
+        if (!collision.gameObject.CompareTag("Floor") && currentState != null)
+        {
+            //Debug.Log(gameObject.name + "," + collision.gameObject.name);
             currentState.OnCollisionEnter(this, collision); 
         }
         
@@ -79,7 +85,7 @@ public class CustomerStateManager : MonoBehaviour
 
     private void Update()
     {
-        button.transform.position = this.transform.position + new Vector3(0, 2, 0);
+        button.transform.position = this.transform.position + new Vector3(0, 1, 0);
         currentState.UpdateState(this);
         //timeLeftIndicator.text = timeRemaining.ToString();
         currentstate = currentState.ToString();

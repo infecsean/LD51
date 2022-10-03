@@ -119,6 +119,7 @@ MonoBehaviour:
   stoolManager: {fileID: 0}
   button: {fileID: 0}
   buttonsCanvas: {fileID: 0}
+  player: {fileID: 0}
   drinkPool: []
   buttonSprite: {fileID: 0}
   leave: 0

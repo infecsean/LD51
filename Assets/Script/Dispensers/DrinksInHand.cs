@@ -8,6 +8,7 @@ public class DrinksInHand : MonoBehaviour
     public List<GameObject> drinksInHand;
     public GameObject objectParent;
     public int handSize;
+    public GameObject counterArea;
 
 
     // Start is called before the first frame update
@@ -29,17 +30,17 @@ public class DrinksInHand : MonoBehaviour
             foreach (var hit in hits)
             {
                 
-                Debug.Log(hit.collider.CompareTag("Drinks"));
+                Debug.Log(hit.collider.CompareTag("Button"));
                 Debug.Log(handSize >= drinksInHand.Count);
                 Debug.Log(drinksInHand.Count);
                 Debug.Log(handSize);
-                if (hit.collider.CompareTag("Drinks") && handSize >= drinksInHand.Count)
+                if (hit.collider.CompareTag("Drinks") && handSize >= drinksInHand.Count && !hit.collider.CompareTag("Button"))
                 {
                     PickUpDrinks(hit.collider.gameObject);
                     drinksInHand.Add(hit.collider.gameObject);
                     break;
                 }
-                else if (hit.collider.CompareTag("Floor") && drinksInHand.Count > 0 && drinksInHand.Count == handSize)
+                else if (hit.collider.CompareTag("Floor") && drinksInHand.Count > 0 && drinksInHand.Count == handSize && !hit.collider.CompareTag("Button"))
                 {
                     PutDownDrink(drinksInHand[0], mouseWorldPos);
                     drinksInHand.Remove(drinksInHand[0]);
