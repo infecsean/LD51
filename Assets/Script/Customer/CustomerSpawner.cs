@@ -9,7 +9,6 @@ public class CustomerSpawner : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(customerPool.Count);
 
         StartCoroutine(SpawnCustomers());
     }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df643990c640fee48a61cb07db583517, type: 3}
+  m_Name: Saul
+  m_EditorClassIdentifier: 
+  customerSprite: {fileID: 0}
+  customerName: 
+  orderPool:
+  - {fileID: 3060282758954538494, guid: 02d0e142a2a7f8341822aff2a04cdd36, type: 3}
+  decisionTime: 10
+  patience: 5
+  tolerance: 4
+  tip: 1

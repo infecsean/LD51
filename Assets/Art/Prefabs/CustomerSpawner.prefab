@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerPool:
-  - {fileID: 4306484434147076359, guid: dd8f9df0b0455f541beef9f88a03f68c, type: 3}
-  - {fileID: 3843612633467626083, guid: c0c0160eea292f14298eca74493eee52, type: 3}
-  spawnPoint: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnCount: 5

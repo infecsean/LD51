@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df643990c640fee48a61cb07db583517, type: 3}
+  m_Name: Tate
+  m_EditorClassIdentifier: 
+  customerSprite: {fileID: 0}
+  customerName: 
+  orderPool:
+  - {fileID: 529343251714779553, guid: 66d867b5dca316e409a4901bb2af863c, type: 3}
+  - {fileID: 657428113879930798, guid: b06817778a3bd8d43be575971c7e17d4, type: 3}
+  decisionTime: 5
+  patience: 4
+  tolerance: 3
+  tip: 2

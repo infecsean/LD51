@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class CustomerStateManager : MonoBehaviour
 {
@@ -10,7 +11,19 @@ public class CustomerStateManager : MonoBehaviour
     public GameObject exitTarget;
     public GameObject stoolManager;
     //public TMPro.TextMeshProUGUI timeLeftIndicator;
-    private float timeRemaining;
+    public GameObject button;
+    public Canvas buttonsCanvas;
+
+    private List<Sprite> drinkPoolSprite;
+
+    [HideInInspector]
+    public List<GameObject> drinkPool;
+
+    [HideInInspector]
+    public Sprite buttonSprite;
+
+    [HideInInspector]
+    public bool leave = false;
 
     [ReadOnly]
     public string currentstate;
@@ -26,6 +39,25 @@ public class CustomerStateManager : MonoBehaviour
 
     private void Start()
     {
+        //puts all the possible object sprites inside a list so we can use it for displaying orders later
+        drinkPoolSprite = new List<Sprite>();
+        drinkPool = new List<GameObject>();
+        button = Instantiate(button, buttonsCanvas.transform.position, Quaternion.identity, buttonsCanvas.transform);
+        foreach (GameObject gameObject in customerObject.orderPool)
+        {
+            drinkPoolSprite.Add(gameObject.GetComponent<SpriteRenderer>().sprite);
+        }
+
+        foreach (GameObject gameObject in customerObject.orderPool)
+        {
+            drinkPool.Add(gameObject);
+        }
+
+        button.SetActive(false);
+        buttonSprite = button.transform.GetChild(1).GetComponent<Image>().sprite;
+        button.transform.GetChild(1).GetComponent<Image>().sprite = null;
+
+
 
         currentState = Walking;
 
@@ -33,16 +65,16 @@ public class CustomerStateManager : MonoBehaviour
 
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         currentState.OnCollisionEnter(this, collision);
     }
 
 
+
     private void Update()
     {
-
+        button.transform.position = this.transform.position + new Vector3(0, 2, 0);
         currentState.UpdateState(this);
         //timeLeftIndicator.text = timeRemaining.ToString();
         currentstate = currentState.ToString();
@@ -63,4 +95,11 @@ public class CustomerStateManager : MonoBehaviour
 
         
     }
+
+    public void GoDestroy()
+    {
+        Destroy(gameObject, .5f);
+    }
+
+
 }
