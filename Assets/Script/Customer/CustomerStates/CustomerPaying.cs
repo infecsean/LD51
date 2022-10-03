@@ -7,7 +7,7 @@ public class CustomerPaying : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
-
+        customer.button.SetActive(true);
     }
     public override void UpdateState(CustomerStateManager customer)
     {

@@ -8,6 +8,7 @@ TagManager:
   - Stool
   - Drinks
   - Floor
+  - Button
   layers:
   - Default
   - TransparentFX

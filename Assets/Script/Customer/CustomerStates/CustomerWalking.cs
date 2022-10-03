@@ -35,6 +35,7 @@ public class CustomerWalking : CustomerBaseState
     public override void OnCollisionEnter(CustomerStateManager customer, Collider2D collision)
     {
         GameObject other = collision.gameObject;
+        Debug.Log(other.name);
         
         if (!customer.leave)
         {
