@@ -51,11 +51,13 @@ public class CustomerStateManager : MonoBehaviour
         foreach (GameObject gameObject in customerObject.orderPool)
         {
             drinkPool.Add(gameObject);
+            Debug.Log("adding drink from pool");
         }
 
         button.SetActive(false);
         buttonSprite = button.transform.GetChild(1).GetComponent<Image>().sprite;
-        button.transform.GetChild(1).GetComponent<Image>().sprite = null;
+        Debug.Log(drinkPool[0].GetComponent<SpriteRenderer>().sprite.name);
+        
 
 
 

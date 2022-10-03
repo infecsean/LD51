@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CustomerOrdering : CustomerBaseState
 {
@@ -11,7 +12,8 @@ public class CustomerOrdering : CustomerBaseState
     {
         customer.button.SetActive(true);
         indexToDisplay = Random.Range(0, customer.drinkPool.Count);
-        customer.buttonSprite = customer.drinkPool[indexToDisplay].GetComponent<SpriteRenderer>().sprite;
+        Debug.Log(customer.drinkPool[indexToDisplay].GetComponent<SpriteRenderer>().sprite.name);
+        customer.button.transform.GetChild(1).GetComponent<Image>().sprite = customer.drinkPool[indexToDisplay].GetComponent<SpriteRenderer>().sprite;
 
         //order from customerobject.drinkpool.random
         //start countdown till patience runs out
